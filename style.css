@@ -21,7 +21,10 @@ a,
 li {
   color: #4a4a4a;
 }
-
+.mobile-logo img,
+.mobile-info {
+  display: none;
+}
 .topic,
 h3 {
   font-size: 1.5rem;
@@ -177,7 +180,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #d8d8d8;
+  background-color: #eaebec;
   padding: 0px 72px 32px 72px;
 }
 
@@ -257,4 +260,108 @@ footer ul.footer-nav li {
 
 footer ul.footer-nav li:last-child {
   margin-right: 0;
+}
+
+@media (max-width: 560px) {
+  .right-side,
+  .logo p,
+  .information .left,
+  .thesis .right,
+  .desktop-info,
+  .course-block img,
+  .info p,
+  .thesis-container h3,
+  .thesis-container p,
+  .footer-nav {
+    display: none;
+  }
+  .mobile-logo img {
+    display: inline-block;
+  }
+  .navbar {
+    height: 64px;
+  }
+  .left-side {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .left-side a img {
+    width: 32px;
+  }
+  .hero {
+    flex-direction: column;
+    .left {
+      padding: 0px;
+    }
+    .right {
+      margin: 32px 16px;
+      gap: 0px;
+    }
+  }
+  .topic {
+    margin: 32px 0px 24px 0px;
+  }
+  .right {
+    flex-basis: 100%;
+    gap: 64px;
+  }
+  .information {
+    padding: 16px 16px 32px 16px;
+  }
+  .information .container:first-child {
+    padding: 0;
+  }
+  .container {
+    flex-direction: column;
+    padding: 0;
+    .sub-container {
+      width: 100%;
+      padding: 28px 16px 0px 16px;
+    }
+    .topic {
+      margin: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+    .mobile-info {
+      display: inline;
+    }
+  }
+  .information .container:last-child {
+    background-color: #f3f5f5;
+  }
+  .course {
+    background-color: #f5f4f5;
+    padding: 32px 16px;
+  }
+  .info {
+    background-color: #d8d8d8;
+  }
+  .course-container {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .info-head {
+    padding: 0px 0px 16px 0px;
+  }
+  .thesis-container .left {
+    flex-basis: 100%;
+  }
+  .thesis {
+    padding: 32px 0px 16px 0px;
+  }
+  .thesis-container .left {
+    padding: 0px;
+  }
+  footer {
+    background-color: #f3f5f5;
+    padding: 16px;
+  }
+  footer p {
+    float: none;
+  }
 }
